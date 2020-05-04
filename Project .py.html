@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[4]:
+
+
+import json
+import requests
+
+url = 'https://www.shopstylecollective.com/api/overview'
+clothing_type = input("Enter a clothing type: ")
+complete_url = url+clothing_type+'4b89e71287msh5ee0c414d1592c5p1557dbjsn50d5b82086ce'
+response = requests.get(complete_url)
+response = requests.get(url)
+data = response.json
+data
+
+if response.status_code == 200:
+    print('Searching for', clothing_type, 'in sustainable fashion. ')
+elif response.status_code == 404:
+    print('Not Found.')
+    
+response.ok
+
+
+# In[6]:
+
+
+response.text
+
+
+# In[21]:
+
+
+sustainable_clothing = {}
+sustainable_clothing ['brand']= input()
+sustainable_clothing['location']= input()
+sustainable_clothing['amount']= input(int())
+print('What',(sustainable_clothing), 'do you want?')
+print ('What',(sustainable_clothing['brand']), 'do you want?')
+print ('What',(sustainable_clothing['location']), 'do you want?')
+print ('What',(sustainable_clothing['amount']), 'do you want?') 
+
+
+# In[20]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
